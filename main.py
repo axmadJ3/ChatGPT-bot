@@ -43,7 +43,7 @@ async def echo_handler(message: Message) -> None:
     except openai.error.RateLimitError:
         await message.answer("Juda ko'p so'rovlar. Iltimos, keyinroq sinab ko'ring.")
     except Exception as e:
-        await message.answer("Xatolik yuz berdi. Iltimos qayta urunib ko'ring.")
+        await message.answer(f"Xatolik yuz berdi. Iltimos qayta urunib ko'ring.{{e}}")
 
 
 async def main() -> None:
